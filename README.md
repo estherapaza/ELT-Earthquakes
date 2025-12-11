@@ -1,10 +1,22 @@
-# Author Esther Guadlupe Apaza Hacho
+# Author Esther Guadalupe Apaza Hacho
 
-# Earthquakes Event ELT Pipeline with Apache Airflow
 
-This project implements a complete ***Extract, Load, Transform (ELT)*** data pipeline, simulating an hourly ingestion of seismic event data to calculate daily risk and support disaster planning.
+# 🌟 The ELT Pipeline for Earthquakes Risk Analysis
 
-***
+This document outlines the design, implementation, and analytical output of the **Earthquakes Event ELT Pipeline**, a robust data solution developed by **Esther Guadalupe Apaza Hacho**.
+
+At its core, this project directly confronts a critical global challenge: the need for rapid, accurate **seismic risk assessment** in volatile regions. Leveraging modern data engineering principles, the pipeline simulates an hourly ingestion of real-world seismic data to produce actionable intelligence for disaster management.
+
+## Project Summary and Core Value
+
+| Component | Description | Key Result |
+| :--- | :--- | :--- |
+| **Architecture** | Implements a complete **Extract, Load, Transform (ELT)** paradigm.  | **Data Integrity** is guaranteed by preserving the raw, untransformed source data. |
+| **Orchestration** | Utilizes **Apache Airflow** (simulated DAG) for reliable scheduling of data tasks (every 6 hours). | Ensures **Timeliness and Consistency** of risk data updates. |
+| **Technology** | Employs SQL-based transformation on a high-performance **DuckDB** data warehouse. | Facilitates **Flexible Transformation** logic (e.g., dynamic risk classification) without modifying raw files. |
+| **Social Impact** | Calculates a daily `risk_level` based on **magnitude, depth, and location**. | Provides **Actionable Insights** to Civil Protection and Urban Planners, prioritizing resource allocation in the most vulnerable zones (e.g., **Zone\_Continental**). |
+
+The successful implementation of this pipeline validates the ELT approach as superior for scientific auditing and evolving risk models, concluding with clear **Key Performance Indicators (KPIs)** and **Visualizations** that directly inform policy formulation for increased public safety.
 
 ## 1. Project Justification (Fase 1)
 ### 1.1 Social/Environmental Problem
@@ -89,3 +101,4 @@ The KPI tracks high-impact events for immediate prioritization by disaster agenc
 
 ### 4.3 Insights for Policy Formulation
 The analysis proves that the **Zone\_Continental** is the most volatile region, not only in terms of frequency but also in the **absolute number of high-impact events**. This outcome allows **Urban Planners** and **Civil Protection** to prioritize resource allocation, structural reinforcement (engineering), and public awareness campaigns specifically in the Zone\_Continental, validating the initial hypothesis of using ELT for actionable social impact.
+
