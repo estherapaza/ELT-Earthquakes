@@ -4,17 +4,17 @@ from datetime import datetime, timedelta
 @dag(
     dag_id='elt_seismic_risk_pipeline',
     start_date=datetime(2025, 12, 1),
-    schedule_interval=timedelta(hours=6),      # Ejecución cada 6 horas
+    schedule_interval=timedelta(hours=6),      # Scheduling: Ejecución cada 6 horas
     catchup=False,
     tags=['elt', 'geospatial', 'disaster_risk'],
     default_args={
-        'retries': 3,                          # M Reintentos de tareas
+        'retries': 3,                          # Manejo de errores: Reintentos de tareas
         'retry_delay': timedelta(minutes=5),
         'priority_weight': 100,
     }
 )
 def seismic_elt_pipeline():
-    # Estos tasks llamarían a los scripts en 'scripts/'
+    # NOTA: En la implementación real, estos tasks llamarían a los scripts en 'scripts/'
 
     @task
     def extract_data_from_api():
